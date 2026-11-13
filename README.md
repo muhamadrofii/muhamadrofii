@@ -96,45 +96,21 @@ Software Engineer with a core focus on full-stack software development and end-t
 
 ---
 
-### Activity & Performance Metrics
+### Projects
 
-<div align="center">
-
-  <!-- Overview: Annual Activity Wave & Global Counts -->
-  <p align="center">
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=muhamadrofii&theme=tokyonight" alt="Profile Details & Activity Wave" />
-  </p>
-
-  <!-- Consistency Streak -->
-  <p align="center">
-    <img src="https://streak-stats.demolab.com/?user=muhamadrofii&theme=tokyonight&hide_border=false" alt="GitHub Contribution Streak" />
-  </p>
-
-</div>
+- **[Scraping & Automation](https://github.com/muhamadrofii/scraping-google-play)** — Web & store data extraction pipelines `Python` `Playwright`
+- **[Bank Sampah Platform](https://github.com/muhamadrofii/banksampah-flutter)** — Waste management mobile client & API `Flutter` `Node.js`
+- **[Smart City Mobile](https://github.com/muhamadrofii/smartcityflutteruas)** — Civic incident reporting & municipal services `Flutter` `Dart`
+- **[Nuxt 3 Portfolio](https://github.com/muhamadrofii/nuxtJs-3-personalPortofolio)** — Portfolio & technical blog with headless CMS `Nuxt 3` `Strapi`
+- **[SIMKODES](https://github.com/muhamadrofii/simkodes)** — Village administrative management system `Laravel` `MySQL`
 
 ---
 
-### Selected Projects
+### Metrics
 
-> **[Scraping & Automation Suite](https://github.com/muhamadrofii/scraping-google-play)**  
-> High-throughput data extraction and headless browser automation pipelines for web feeds and store data.  
-> `Python` `Playwright` • [PlayStore Scraper](https://github.com/muhamadrofii/scraping-google-play) • [X Scraper](https://github.com/muhamadrofii/scraping-X-2025)
-
-> **[Bank Sampah Digital Platform](https://github.com/muhamadrofii/banksampah-flutter)**  
-> Community waste-recycling platform with cross-platform mobile app and backend REST services.  
-> `Flutter` `Node.js` `Express` • [Mobile Client](https://github.com/muhamadrofii/banksampah-flutter) • [API Backend](https://github.com/muhamadrofii/backendBankSampah)
-
-> **[Smart City Mobile](https://github.com/muhamadrofii/smartcityflutteruas)**  
-> Citizen reporting and municipal service application for local public governance and city notifications.  
-> `Flutter` `Dart` `REST API` • [Source Repository](https://github.com/muhamadrofii/smartcityflutteruas)
-
-> **[Nuxt 3 Portfolio & CMS](https://github.com/muhamadrofii/nuxtJs-3-personalPortofolio)**  
-> Production developer portfolio and technical blog built with SSR architecture and headless Strapi CMS.  
-> `Nuxt 3` `Vue 3` `Strapi` • [Source Repository](https://github.com/muhamadrofii/nuxtJs-3-personalPortofolio)
-
-> **[SIMKODES (Sistem Info Desa)](https://github.com/muhamadrofii/simkodes)**  
-> Administrative documentation and public record platform for village government digitalization.  
-> `Laravel` `Blade` `MySQL` • [Source Repository](https://github.com/muhamadrofii/simkodes)
+<div align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=muhamadrofii&theme=tokyonight" alt="GitHub Metrics" />
+</div>
 
 ---
 

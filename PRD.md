@@ -4,7 +4,7 @@
 - **Repository**: `muhamadrofii/muhamadrofii`
 - **Owner**: Muhamad Rofi'i (`muhamadrofii911@gmail.com`)
 - **Role Positioning**: Software Engineer & Automation
-- **Version**: 2.3.0
+- **Version**: 2.4.0
 - **Status**: Production
 
 ---
@@ -13,10 +13,10 @@
 
 This specification defines the functional, structural, and integration requirements for the root GitHub Profile README (`muhamadrofii/muhamadrofii`). 
 
-The architecture deploys an informative, high-signal developer portfolio adhering to the following engineering standards:
-1. **Zero Tacky Emojis**: Replaced with verified Simple Icons and clean typographic hierarchy.
-2. **Curated High-Signal Telemetry**: Focuses on verified annual activity curves and contribution consistency streaks, removing skewed language-by-repo donut charts.
-3. **Structured Responsive Design**: Eliminates clunky markdown tables in favor of high-readability card blockquotes for projects and symmetrical metrics blocks.
+The architecture deploys an ultra-minimalist, high-signal developer portfolio:
+1. **Zero Tacky Emojis**: Replaced with canonical Simple Icons and clean typographic hierarchy.
+2. **Minimalist Single-Card Telemetry**: High-density activity wave card detailing total annual contributions (315+), public repos (36), account age, and chronological curve in a single unified component.
+3. **Streamlined Project Index**: Single-line fast-scanning project entries replacing heavy blockquotes and complex tables.
 
 ---
 
@@ -33,7 +33,6 @@ flowchart TD
         PVC[Page View Counter]
         SI[Shields.io Badge Gateway]
         GPSC[GitHub Profile Summary Engine]
-        STR[Streak Stats Engine]
     end
 
     subgraph DataSources["GitHub GraphQL / REST APIs"]
@@ -45,10 +44,9 @@ flowchart TD
     GH --> PVC
     GH --> SI
     GH --> GPSC
-    GH --> STR
 
     GPSC --> API
-    STR --> EVT
+    GPSC --> EVT
 ```
 
 ---
@@ -80,27 +78,22 @@ flowchart TD
 | **Frontend & Mobile** | Vue.js, Nuxt 3, Flutter, Tailwind CSS, Bootstrap | `vuedotjs`, `nuxtdotjs`, `flutter`, `tailwindcss`, `bootstrap` |
 | **Storage & Databases** | MySQL, PostgreSQL, SQLite | `mysql`, `postgresql`, `sqlite` |
 
-### 3.3 Cohesive Activity & Performance Telemetry
+### 3.3 Minimalist Project Index
+Compact, single-line format for rapid readability:
+- **Scraping & Automation**: Web & store data extraction pipelines (`Python`, `Playwright`)
+- **Bank Sampah Platform**: Waste management mobile client & API (`Flutter`, `Node.js`)
+- **Smart City Mobile**: Civic incident reporting & municipal services (`Flutter`, `Dart`)
+- **Nuxt 3 Portfolio**: Portfolio & technical blog with headless CMS (`Nuxt 3`, `Strapi`)
+- **SIMKODES**: Village administrative management system (`Laravel`, `MySQL`)
 
-All metrics utilize the unified `tokyonight` theme to maintain visual symmetry:
-
-| Service Component | Endpoint Pattern | Visual Dimensions & Output |
-| :--- | :--- | :--- |
-| **Annual Activity Wave** | `github-profile-summary-cards.../profile-details` | 700x200px overview card showing total annual contributions (315+), public repos (36), account age, and chronological contribution wave. |
-| **Consistency Streak** | `streak-stats.demolab.com/?user=muhamadrofii` | 495x195px card tracking active streaks and total active contribution milestones. |
-
-### 3.4 Selected Repository Index
-
-Formatted using responsive markdown card blocks for optimal mobile/desktop rendering:
-1. **Scraping & Automation Suite** (`Python`, `Playwright`) - `scraping-google-play`, `scraping-X-2025`
-2. **Bank Sampah Digital Platform** (`Flutter`, `Node.js`, `Express`) - `banksampah-flutter`, `backendBankSampah`
-3. **Smart City Mobile** (`Flutter`, `Dart`) - `smartcityflutteruas`
-4. **Nuxt 3 Portfolio & CMS** (`Nuxt 3`, `Vue 3`, `Strapi`) - `nuxtJs-3-personalPortofolio`
-5. **SIMKODES** (`Laravel`, `Blade`, `MySQL`) - `simkodes`
+### 3.4 Unified Telemetry Card
+- **Component**: `github-profile-summary-cards.vercel.app/api/cards/profile-details?username=muhamadrofii&theme=tokyonight`
+- **Dimensions**: 700x200px
+- **Rendered Metrics**: Total annual contributions, repository count, account longevity, and chronological activity wave curve.
 
 ---
 
-## 4. Performance & Reliability Runbook
+## 4. Performance & Reliability
 
-1. **Service Decoupling**: Rather than relying on a single third-party Vercel instance, telemetry is balanced across dedicated services (`github-profile-summary-cards` and `streak-stats.demolab.com`).
-2. **Fail-safe Caching**: Upstream HTTP cache TTLs (4 to 24 hours) ensure fast page loads and protect against GitHub secondary API rate limits.
+1. **Reduced HTTP Footprint**: Eliminating stacked secondary widgets reduces edge requests and eliminates layout shift.
+2. **Edge Caching**: Upstream HTTP cache TTL (4 hours) ensures responsive rendering and zero rate-limiting overhead.
