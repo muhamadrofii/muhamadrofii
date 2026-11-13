@@ -1,157 +1,122 @@
-# Product Requirements Document (PRD): GitHub Profile README
+# Technical Specification: GitHub Profile Architecture
 
-**Project:** GitHub Profile Enhancement & Developer Portfolio  
-**Repository:** [github.com/muhamadrofii/muhamadrofii](https://github.com/muhamadrofii/muhamadrofii)  
-**Profile Owner:** Muhamad Rofi'i ([@muhamadrofii](https://github.com/muhamadrofii))  
-**Email:** `muhamadrofii911@gmail.com`  
-**Document Version:** 1.0.0  
-**Status:** Approved & Ready for Deployment  
-
----
-
-## 1. Executive Summary & Vision
-
-### 1.1 Objective
-Transform the root GitHub landing page of **Muhamad Rofi'i** (`https://github.com/muhamadrofii`) into a modern, compelling, and data-driven developer showcase. The profile serves as the digital front door for recruiters, potential clients, and open-source peers, effectively communicating Muhamad's technical versatility across:
-- **Web Development**: Vue.js, Nuxt 3, Laravel, Django, Node.js
-- **Mobile Development**: Flutter & Dart
-- **Automation & Scraping**: Python, Playwright, Web Scraping
-- **Web3 Explorations**: Ethers.js, Testnets
-
-### 1.2 Problem Statement
-A default or empty GitHub profile page misses an invaluable opportunity to stand out. Without context, visitors must manually comb through 36+ repositories to understand the developer's core capabilities, project scope, and activity levels.
-
-### 1.3 Solution
-Deliver a cohesive, high-aesthetic README that combines **animated headers**, **curated technical stacks**, **real-time statistical telemetry**, and **featured projects** into a unified layout optimized for both GitHub Desktop and Mobile web views.
+- **Project**: Developer Profile Landing Architecture
+- **Repository**: `muhamadrofii/muhamadrofii`
+- **Owner**: Muhamad Rofi'i (`muhamadrofii911@gmail.com`)
+- **Version**: 2.0.0
+- **Status**: Production
 
 ---
 
-## 2. Target Audience & Personas
+## 1. System Objective & Scope
+
+This specification defines the functional, structural, and integration requirements for the root GitHub Profile README (`muhamadrofii/muhamadrofii`). 
+
+The objective is to deploy a high-performance, real-time developer portfolio directly on GitHub using public CDN services, vector badge pipelines, and automated statistical endpoints. The implementation enforces strict design discipline: zero non-standard Unicode emojis, high-contrast flat badge taxonomies, and predictable responsive rendering across desktop and mobile clients.
+
+---
+
+## 2. Architecture & Data Flow
 
 ```mermaid
-graph TD
-    A[Visitor on github.com/muhamadrofii] --> B[Technical Recruiter / HR]
-    A --> C[Engineering Lead / CTO]
-    A --> D[Open Source Collaborator / Client]
+flowchart TD
+    subgraph Client["GitHub Web / Mobile Client"]
+        GH[Profile View: github.com/muhamadrofii]
+    end
 
-    B --> B1[Needs quick scanning of skills, contact info, and role fit]
-    C --> C1[Evaluates code activity, consistency, project architectures, and streak]
-    D --> D1[Explores public repos, niche interests web3/scraping, and synergy]
+    subgraph CDN["Edge & Service Pipelines"]
+        SVG[Typing SVG Engine]
+        PVC[Page View Counter]
+        SI[Shields.io Badge Gateway]
+        GRS[GitHub Readme Stats]
+        STR[Streak Stats Engine]
+        ACT[Activity Graph Engine]
+    end
+
+    subgraph DataSources["GitHub GraphQL / REST APIs"]
+        API[api.github.com/users/muhamadrofii]
+        EVT[Public Event Streams & Contributions]
+    end
+
+    GH --> SVG
+    GH --> PVC
+    GH --> SI
+    GH --> GRS
+    GH --> STR
+    GH --> ACT
+
+    GRS --> API
+    STR --> EVT
+    ACT --> EVT
 ```
 
-1. **Technical Recruiters & HR Specialists**:
-   - *Goal*: Fast evaluation (<30 seconds) of primary programming languages, frameworks, location/readiness, and contact details.
-   - *Key Element*: Clean Shields.io badges, dynamic typing role description, direct email/social action buttons.
-2. **Tech Leads & Senior Engineers**:
-   - *Goal*: Verify consistency, code frequency, complexity of real-world projects, and architectural diversity.
-   - *Key Element*: GitHub contribution streak, top languages chart, activity graph, and curated project showcases.
-3. **Clients & Open Source Collaborators**:
-   - *Goal*: Discover specialized abilities (e.g., custom web scrapers, full-stack Laravel/Vue solutions, Flutter apps).
-   - *Key Element*: Featured repositories with direct links and live demo references.
-
 ---
 
-## 3. Brand Identity & Design System
+## 3. Structural & Component Requirements
 
-### 3.1 Theme & Color Palette
-- **Primary Aesthetic**: Modern Dark / Cyberpunk / Tokyo Night
-- **Color Accents**:
-  - Primary Accent: Neon Cyan (`#7dcfff` / `#38bdf8`)
-  - Secondary Accent: Purple / Indigo (`#bb9af7` / `#818cf8`)
-  - Background Compatibility: Dark mode native (`#0d1117`), degrades gracefully to light mode
-- **Visual Rhythm**: Centered dynamic banner $\rightarrow$ Structured left-aligned bio $\rightarrow$ Badges grid $\rightarrow$ Symmetrical two-column statistics cards $\rightarrow$ Project showcase table.
+### 3.1 Hero Header & Identity
+1. **Dynamic Vector Typewriter**:
+   - Provider: `readme-typing-svg.demolab.com`
+   - Parameters:
+     - Font: `JetBrains Mono`
+     - Font Weight: `500`
+     - Font Size: `20px`
+     - Color: `#38BDF8` (Cyan 400)
+     - Lines:
+       - `Full-Stack Web & Mobile Developer`
+       - `Nuxt 3 • Laravel • Django • Flutter`
+       - `Web Scraping & Browser Automation`
+       - `Building reliable and scalable software`
+2. **Telemetry Badges**:
+   - Page view counter (`komarev.com/ghpvc/`, `color=0284c7`, `style=flat-square`).
+   - Availability and geographic metadata (`style=flat-square`).
+3. **Direct Communication Protocol**:
+   - SVG badges linking to verified contact channels:
+     - Email: `mailto:muhamadrofii911@gmail.com` (Gmail icon)
+     - LinkedIn: `https://linkedin.com/in/muhamadrofii` (LinkedIn icon)
+     - GitHub: `https://github.com/muhamadrofii` (GitHub icon)
 
----
+### 3.2 Technical Taxonomy (Shields.io + Simple Icons)
+All badges must use `style=flat-square`, official brand hex colors, and high-contrast white or black icons:
 
-## 4. Functional Specifications & Layout Breakdown
-
-### 4.1 Header & Hero Section
-- **Dynamic Typing SVG**: Powered by `readme-typing-svg`. Displays cycling titles:
-  1. *"Hi, I'm Muhamad Rofi'i 👋"*
-  2. *"Full-Stack Web & Mobile Developer 🚀"*
-  3. *"Nuxt 3 • Laravel • Django • Flutter 💻"*
-  4. *"Web Scraping & Automation Specialist 🕷️"*
-- **Real-Time Visitor Counter**: Powered by `komarev.com/ghpvc/` tracking total profile views with customized flat styling.
-
-### 4.2 About Me & Bio
-A punchy bulleted breakdown communicating active focus:
-- 🔭 **Currently Building**: Cross-platform mobile apps & full-stack web applications.
-- 🌱 **Continuous Learning**: Advanced web scraping with Playwright, distributed backends, and Web3 testnet deployments.
-- 🎓 **Background & Certifications**: Dicoding Backend Graduate, Educourse Web Development Alumnus.
-- 💬 **Core Inquiries**: Vue/Nuxt, Laravel, Django REST, Flutter, and custom scrapers.
-- ⚡ **Fun Fact**: Passionate about solving real-world civic problems (Bank Sampah, Smart City apps).
-
-### 4.3 Technical Skills Matrix (Categorized Badges)
-Utilizing official brand logos with high-contrast Shields.io flat badges:
-
-| Category | Technologies Included |
-| :--- | :--- |
-| **Languages** | JavaScript, TypeScript, Python, PHP, Dart, HTML5, CSS3, SQL |
-| **Frontend** | Vue.js, Nuxt.js, Tailwind CSS, Bootstrap, jQuery |
-| **Backend & APIs** | Laravel, Django, Node.js, Express.js, Strapi Headless CMS |
-| **Mobile Development** | Flutter, Dart |
-| **Databases** | MySQL, PostgreSQL, SQLite, MongoDB |
-| **Tools, Scraping & DevOps** | Git, GitHub, Playwright, Python Scrapy/BS4, Postman, VS Code, Figma |
-
-### 4.4 Real-Time Telemetry & Statistical Cards
-All widgets configured with unified `tokyonight` theme to maintain visual cohesion:
-1. **GitHub Overall Stats** (`github-readme-stats`):
-   - Shows Total Stars, Commits, PRs, Issues, and Contribution Rank (`show_icons=true`, `include_all_commits=true`, `count_private=true`).
-2. **Top Languages** (`github-readme-stats/top-langs`):
-   - Compact layout showing distribution across Python, JavaScript, Dart, PHP, Vue, etc.
-3. **GitHub Streak Stats** (`streak-stats`):
-   - Real-time current streak, longest streak, and total active days.
-4. **GitHub Profile Trophies** (`github-profile-trophy`):
-   - Badges for achievements (Stars, Commits, Pull Requests, Account Age).
-5. **Interactive Contribution Activity Graph** (`github-readme-activity-graph`):
-   - Dynamic SVG showing recent activity curve.
-
-### 4.5 Curated Project Showcase
-A portfolio table highlighting practical engineering work in Muhamad's repository portfolio:
-
-| Project | Tech Stack | Highlights & Architecture |
+| Domain | Target Stack | Canonical Icon Key |
 | :--- | :--- | :--- |
-| ♻️ **Bank Sampah Ecosystem** | Flutter, Node.js, Express | Digital waste management platform with real-time transaction balance & recycling tracking. |
-| 🏙️ **Smart City Mobile** | Flutter, Dart, REST API | Public service and citizen report application built for municipal monitoring. |
-| 🌐 **Nuxt 3 Portfolio & Blog** | Nuxt 3, Vue, Strapi CMS | Headless CMS powered personal publishing site with SSR/SSG optimization. |
-| 🕷️ **Playwright & X/Store Scrapers** | Python, Playwright | High-throughput data extraction engines for Play Store and social media feeds. |
-| 🏛️ **SIMKODES (Village Admin)** | Laravel, Blade, MySQL | Administrative management and public record platform for local government units. |
+| **Languages** | JavaScript, TypeScript, Python, PHP, Dart, HTML5, CSS3, SQL | `javascript`, `typescript`, `python`, `php`, `dart`, `html5`, `css3`, `postgresql` |
+| **Frontend & Mobile** | Vue.js, Nuxt 3, Flutter, Tailwind CSS, Bootstrap | `vuedotjs`, `nuxtdotjs`, `flutter`, `tailwindcss`, `bootstrap` |
+| **Backend & APIs** | Laravel, Django, Node.js, Express, Strapi | `laravel`, `django`, `nodedotjs`, `express`, `strapi` |
+| **Storage & Tooling** | MySQL, PostgreSQL, Playwright, Git, GitHub, Postman, Figma | `mysql`, `postgresql`, `playwright`, `git`, `github`, `postman`, `figma` |
 
-### 4.6 Contact & Social Gateway
-Interactive, stylized call-to-action badges:
-- **Email**: `muhamadrofii911@gmail.com`
-- **LinkedIn**: `linkedin.com/in/muhamadrofii`
-- **GitHub**: `github.com/muhamadrofii`
+### 3.3 Dynamic Statistics Integration
 
----
-
-## 5. Third-Party Services & API Integration Reference
-
-| Service Name | Provider / Base URL | Purpose |
+| Service Component | Endpoint Pattern | Configuration Parameters |
 | :--- | :--- | :--- |
-| **Typing SVG** | `https://readme-typing-svg.demolab.com` | Animated tagline in header |
-| **GitHub Readme Stats** | `https://github-readme-stats.vercel.app` | Overall stats & top languages |
-| **Streak Stats** | `https://streak-stats.demolab.com` | Coding streak and consistency metrics |
-| **GitHub Profile Trophy**| `https://github-profile-trophy.vercel.app` | Visual achievements and milestone trophies |
-| **Activity Graph** | `https://github-readme-activity-graph.vercel.app` | Dynamic commit activity chart |
-| **Shields.io** | `https://img.shields.io` | Standardized flat tech badges & social links |
-| **Visitor Counter** | `https://komarev.com/ghpvc/` | Profile view telemetry |
+| **Profile Stats** | `github-readme-stats.vercel.app/api` | `username=muhamadrofii&show_icons=true&theme=tokyonight&hide_border=false&count_private=true&include_all_commits=true` |
+| **Top Languages** | `github-readme-stats.vercel.app/api/top-langs/` | `username=muhamadrofii&layout=compact&theme=tokyonight&hide_border=false` |
+| **Streak Tracker** | `streak-stats.demolab.com/` | `user=muhamadrofii&theme=tokyonight&hide_border=false` |
+| **Activity Graph** | `github-readme-activity-graph.vercel.app/graph` | `username=muhamadrofii&theme=tokyo-night&hide_border=false` |
+
+### 3.4 Selected Repository Index
+
+| Project Name | Architecture Pattern | Stack | Target Repository |
+| :--- | :--- | :--- | :--- |
+| **Bank Sampah Platform** | Mobile Client + REST API Backend | Flutter, Node.js, Express | `banksampah-flutter`, `backendBankSampah` |
+| **Smart City Mobile** | Cross-Platform Mobile Client | Flutter, Dart, REST API | `smartcityflutteruas` |
+| **Nuxt 3 Portfolio** | SSR / Headless CMS Integration | Nuxt 3, Vue 3, Strapi | `nuxtJs-3-personalPortofolio` |
+| **Scraping Suite** | Headless Browser Automation | Python, Playwright | `scraping-google-play`, `scraping-X-2025` |
+| **SIMKODES** | Monolithic MVC Management | Laravel, Blade, MySQL | `simkodes` |
 
 ---
 
-## 6. Non-Functional Requirements
+## 4. Performance & Availability Constraints
 
-1. **Performance**: All image assets and SVG endpoints must load within **< 2.5 seconds** under typical network conditions via public CDNs.
-2. **Reliability / High Availability**: External SVG services used are high-uptime community standards with fallbacks in place.
-3. **Responsive Design**: Cards and tables are structured to prevent horizontal overflow on mobile devices.
-4. **Maintainability**: The profile README requires zero manual edits for stats; GitHub Actions can optionally be integrated later for blog syndication.
+1. **Sub-second Asset Rendering**: Badges are served via global edge CDNs (Fastly/Cloudflare via Shields.io).
+2. **Stateless Dynamic Metrics**: Statistics cards calculate metrics on request using GitHub's GraphQL API; cache TTL is enforced upstream (default 2 to 4 hours) to prevent GitHub secondary rate limiting.
+3. **No External Script Dependencies**: All components are rendered via static HTML and SVG markup supported natively by GitHub Markdown sanitation rules (no raw JS, no inline CSS styles beyond Markdown attributes).
 
 ---
 
-## 7. Delivery & Rollout Plan
+## 5. Maintenance Runbook
 
-- [x] **Step 1: Codebase & Profile Inspection** (Analyze 36 public repositories, stack distribution, and git config).
-- [x] **Step 2: PRD Architecture** (Document design system, widget specifications, and content strategy).
-- [x] **Step 3: Profile README Generation** (Create optimized `README.md` with responsive markdown and SVG endpoints).
-- [x] **Step 4: Repository Synchronization** (Commit `README.md` and `PRD.md` to `main` branch).
-- [ ] **Step 5: Git Push & Remote Activation** (Push to `https://github.com/muhamadrofii/muhamadrofii.git`).
+- **Adding Tech Badges**: Append to `README.md` following `<img src="https://img.shields.io/badge/<NAME>-<HEX>?style=flat-square&logo=<SLUG>&logoColor=white" />`.
+- **Project Re-ordering**: Update the Markdown table under `### Selected Projects` with repository links and stack definitions.
+- **Upstream Service Health**: If an external stats service experiences downtime, the corresponding image link may be wrapped in an `<a>` fallback or temporarily hidden without breaking the rest of the document layout.
