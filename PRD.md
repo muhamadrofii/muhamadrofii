@@ -3,7 +3,8 @@
 - **Project**: Developer Profile Landing Architecture
 - **Repository**: `muhamadrofii/muhamadrofii`
 - **Owner**: Muhamad Rofi'i (`muhamadrofii911@gmail.com`)
-- **Version**: 2.0.0
+- **Role Positioning**: Software Engineer & Automation
+- **Version**: 2.1.0
 - **Status**: Production
 
 ---
@@ -12,7 +13,11 @@
 
 This specification defines the functional, structural, and integration requirements for the root GitHub Profile README (`muhamadrofii/muhamadrofii`). 
 
-The objective is to deploy a high-performance, real-time developer portfolio directly on GitHub using public CDN services, vector badge pipelines, and automated statistical endpoints. The implementation enforces strict design discipline: zero non-standard Unicode emojis, high-contrast flat badge taxonomies, and predictable responsive rendering across desktop and mobile clients.
+The profile positions the engineer as a **Software Engineer & Automation** specialist, emphasizing core strengths in:
+1. Full-stack web and mobile engineering (Vue/Nuxt 3, Laravel, Django, Flutter).
+2. End-to-end browser automation, scraping pipelines, and task orchestration (Python, Playwright).
+
+The implementation enforces a minimalist engineering design: zero Unicode emojis, canonical Simple Icons, flat-square vector badges, and real-time statistical telemetry.
 
 ---
 
@@ -63,28 +68,28 @@ flowchart TD
      - Font Size: `20px`
      - Color: `#38BDF8` (Cyan 400)
      - Lines:
-       - `Full-Stack Web & Mobile Developer`
+       - `Software Engineer & Automation`
+       - `Full-Stack Web, Mobile & Data Pipelines`
        - `Nuxt 3 • Laravel • Django • Flutter`
-       - `Web Scraping & Browser Automation`
-       - `Building reliable and scalable software`
+       - `Headless Browser Automation & Scraping`
 2. **Telemetry Badges**:
    - Page view counter (`komarev.com/ghpvc/`, `color=0284c7`, `style=flat-square`).
+   - Specialization tag (`Focus-Software_Engineer_%26_Automation`).
    - Availability and geographic metadata (`style=flat-square`).
 3. **Direct Communication Protocol**:
-   - SVG badges linking to verified contact channels:
-     - Email: `mailto:muhamadrofii911@gmail.com` (Gmail icon)
-     - LinkedIn: `https://linkedin.com/in/muhamadrofii` (LinkedIn icon)
-     - GitHub: `https://github.com/muhamadrofii` (GitHub icon)
+   - Email: `mailto:muhamadrofii911@gmail.com` (Gmail badge)
+   - LinkedIn: `https://linkedin.com/in/muhamadrofii` (LinkedIn badge)
+   - GitHub: `https://github.com/muhamadrofii` (GitHub badge)
 
 ### 3.2 Technical Taxonomy (Shields.io + Simple Icons)
-All badges must use `style=flat-square`, official brand hex colors, and high-contrast white or black icons:
 
 | Domain | Target Stack | Canonical Icon Key |
 | :--- | :--- | :--- |
 | **Languages** | JavaScript, TypeScript, Python, PHP, Dart, HTML5, CSS3, SQL | `javascript`, `typescript`, `python`, `php`, `dart`, `html5`, `css3`, `postgresql` |
-| **Frontend & Mobile** | Vue.js, Nuxt 3, Flutter, Tailwind CSS, Bootstrap | `vuedotjs`, `nuxtdotjs`, `flutter`, `tailwindcss`, `bootstrap` |
+| **Automation & Tools** | Playwright, Python Automation, Git, GitHub, Postman, Figma | `playwright`, `python`, `git`, `github`, `postman`, `figma` |
 | **Backend & APIs** | Laravel, Django, Node.js, Express, Strapi | `laravel`, `django`, `nodedotjs`, `express`, `strapi` |
-| **Storage & Tooling** | MySQL, PostgreSQL, Playwright, Git, GitHub, Postman, Figma | `mysql`, `postgresql`, `playwright`, `git`, `github`, `postman`, `figma` |
+| **Frontend & Mobile** | Vue.js, Nuxt 3, Flutter, Tailwind CSS, Bootstrap | `vuedotjs`, `nuxtdotjs`, `flutter`, `tailwindcss`, `bootstrap` |
+| **Storage & Databases** | MySQL, PostgreSQL, SQLite | `mysql`, `postgresql`, `sqlite` |
 
 ### 3.3 Dynamic Statistics Integration
 
@@ -99,10 +104,10 @@ All badges must use `style=flat-square`, official brand hex colors, and high-con
 
 | Project Name | Architecture Pattern | Stack | Target Repository |
 | :--- | :--- | :--- | :--- |
+| **Data Scraping & Automation** | Headless Browser Automation & Pipelines | Python, Playwright | `scraping-google-play`, `scraping-X-2025` |
 | **Bank Sampah Platform** | Mobile Client + REST API Backend | Flutter, Node.js, Express | `banksampah-flutter`, `backendBankSampah` |
 | **Smart City Mobile** | Cross-Platform Mobile Client | Flutter, Dart, REST API | `smartcityflutteruas` |
-| **Nuxt 3 Portfolio** | SSR / Headless CMS Integration | Nuxt 3, Vue 3, Strapi | `nuxtJs-3-personalPortofolio` |
-| **Scraping Suite** | Headless Browser Automation | Python, Playwright | `scraping-google-play`, `scraping-X-2025` |
+| **Nuxt 3 Portfolio & CMS** | SSR / Headless CMS Integration | Nuxt 3, Vue 3, Strapi | `nuxtJs-3-personalPortofolio` |
 | **SIMKODES** | Monolithic MVC Management | Laravel, Blade, MySQL | `simkodes` |
 
 ---
@@ -111,7 +116,7 @@ All badges must use `style=flat-square`, official brand hex colors, and high-con
 
 1. **Sub-second Asset Rendering**: Badges are served via global edge CDNs (Fastly/Cloudflare via Shields.io).
 2. **Stateless Dynamic Metrics**: Statistics cards calculate metrics on request using GitHub's GraphQL API; cache TTL is enforced upstream (default 2 to 4 hours) to prevent GitHub secondary rate limiting.
-3. **No External Script Dependencies**: All components are rendered via static HTML and SVG markup supported natively by GitHub Markdown sanitation rules (no raw JS, no inline CSS styles beyond Markdown attributes).
+3. **No External Script Dependencies**: All components are rendered via static HTML and SVG markup supported natively by GitHub Markdown sanitation rules.
 
 ---
 
@@ -119,4 +124,4 @@ All badges must use `style=flat-square`, official brand hex colors, and high-con
 
 - **Adding Tech Badges**: Append to `README.md` following `<img src="https://img.shields.io/badge/<NAME>-<HEX>?style=flat-square&logo=<SLUG>&logoColor=white" />`.
 - **Project Re-ordering**: Update the Markdown table under `### Selected Projects` with repository links and stack definitions.
-- **Upstream Service Health**: If an external stats service experiences downtime, the corresponding image link may be wrapped in an `<a>` fallback or temporarily hidden without breaking the rest of the document layout.
+- **Upstream Service Health**: If an external stats service experiences downtime, the corresponding image link can fail gracefully or be updated without layout disruption.
