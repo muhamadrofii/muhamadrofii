@@ -96,21 +96,24 @@ Software Engineer with a core focus on full-stack software development and end-t
 
 ---
 
-### GitHub Metrics
+### Activity & Performance Metrics
 
 <div align="center">
 
+  <!-- Overview: Annual Activity Wave & Global Counts -->
   <p align="center">
-    <img src="https://github-readme-stats.vercel.app/api?username=muhamadrofii&show_icons=true&theme=tokyonight&hide_border=false&count_private=true&include_all_commits=true" alt="GitHub Stats" height="185" />
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=muhamadrofii&layout=compact&theme=tokyonight&hide_border=false" alt="Top Languages" height="185" />
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=muhamadrofii&theme=tokyonight" alt="Profile Details & Activity Wave" />
   </p>
 
+  <!-- Mid Row: Core Stats + Language Distribution -->
   <p align="center">
-    <img src="https://streak-stats.demolab.com/?user=muhamadrofii&theme=tokyonight&hide_border=false" alt="GitHub Streak" />
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=muhamadrofii&theme=tokyonight" alt="GitHub Stats Summary" />
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=muhamadrofii&theme=tokyonight" alt="Repositories Per Language" />
   </p>
 
+  <!-- Bottom Row: Consistency Streak -->
   <p align="center">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=muhamadrofii&theme=tokyo-night&hide_border=false" alt="Activity Graph" />
+    <img src="https://streak-stats.demolab.com/?user=muhamadrofii&theme=tokyonight&hide_border=false" alt="GitHub Contribution Streak" />
   </p>
 
 </div>
@@ -119,13 +122,25 @@ Software Engineer with a core focus on full-stack software development and end-t
 
 ### Selected Projects
 
-| Project | Description | Stack | Source Code |
-| :--- | :--- | :--- | :---: |
-| **Data Scraping & Automation** | High-throughput data extraction and headless browser automation pipelines. | `Python` `Playwright` | [PlayStore](https://github.com/muhamadrofii/scraping-google-play) • [X Scraper](https://github.com/muhamadrofii/scraping-X-2025) |
-| **Bank Sampah Platform** | Waste management platform with mobile client and backend REST API services. | `Flutter` `Node.js` `Express` | [Client](https://github.com/muhamadrofii/banksampah-flutter) • [API](https://github.com/muhamadrofii/backendBankSampah) |
-| **Smart City Mobile** | Municipal public services, incident reports, and civic monitoring application. | `Flutter` `Dart` `REST API` | [Repository](https://github.com/muhamadrofii/smartcityflutteruas) |
-| **Nuxt 3 Portfolio & CMS** | Production web application and developer blog with headless content architecture. | `Nuxt 3` `Vue 3` `Strapi` | [Repository](https://github.com/muhamadrofii/nuxtJs-3-personalPortofolio) |
-| **SIMKODES** | Village administration and citizen documentation management system. | `Laravel` `Blade` `MySQL` | [Repository](https://github.com/muhamadrofii/simkodes) |
+> **[Scraping & Automation Suite](https://github.com/muhamadrofii/scraping-google-play)**  
+> High-throughput data extraction and headless browser automation pipelines for web feeds and store data.  
+> `Python` `Playwright` • [PlayStore Scraper](https://github.com/muhamadrofii/scraping-google-play) • [X Scraper](https://github.com/muhamadrofii/scraping-X-2025)
+
+> **[Bank Sampah Digital Platform](https://github.com/muhamadrofii/banksampah-flutter)**  
+> Community waste-recycling platform with cross-platform mobile app and backend REST services.  
+> `Flutter` `Node.js` `Express` • [Mobile Client](https://github.com/muhamadrofii/banksampah-flutter) • [API Backend](https://github.com/muhamadrofii/backendBankSampah)
+
+> **[Smart City Mobile](https://github.com/muhamadrofii/smartcityflutteruas)**  
+> Citizen reporting and municipal service application for local public governance and city notifications.  
+> `Flutter` `Dart` `REST API` • [Source Repository](https://github.com/muhamadrofii/smartcityflutteruas)
+
+> **[Nuxt 3 Portfolio & CMS](https://github.com/muhamadrofii/nuxtJs-3-personalPortofolio)**  
+> Production developer portfolio and technical blog built with SSR architecture and headless Strapi CMS.  
+> `Nuxt 3` `Vue 3` `Strapi` • [Source Repository](https://github.com/muhamadrofii/nuxtJs-3-personalPortofolio)
+
+> **[SIMKODES (Sistem Info Desa)](https://github.com/muhamadrofii/simkodes)**  
+> Administrative documentation and public record platform for village government digitalization.  
+> `Laravel` `Blade` `MySQL` • [Source Repository](https://github.com/muhamadrofii/simkodes)
 
 ---
 

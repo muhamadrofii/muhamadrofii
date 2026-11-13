@@ -4,7 +4,7 @@
 - **Repository**: `muhamadrofii/muhamadrofii`
 - **Owner**: Muhamad Rofi'i (`muhamadrofii911@gmail.com`)
 - **Role Positioning**: Software Engineer & Automation
-- **Version**: 2.1.0
+- **Version**: 2.2.0
 - **Status**: Production
 
 ---
@@ -13,15 +13,14 @@
 
 This specification defines the functional, structural, and integration requirements for the root GitHub Profile README (`muhamadrofii/muhamadrofii`). 
 
-The profile positions the engineer as a **Software Engineer & Automation** specialist, emphasizing core strengths in:
-1. Full-stack web and mobile engineering (Vue/Nuxt 3, Laravel, Django, Flutter).
-2. End-to-end browser automation, scraping pipelines, and task orchestration (Python, Playwright).
-
-The implementation enforces a minimalist engineering design: zero Unicode emojis, canonical Simple Icons, flat-square vector badges, and real-time statistical telemetry.
+The architecture deploys an informative, high-signal developer portfolio adhering to the following engineering standards:
+1. **Zero Tacky Emojis**: Replaced with verified Simple Icons and clean typographic hierarchy.
+2. **Robust Multi-source Telemetry**: Utilizes high-uptime, cached metrics services to avoid downtime.
+3. **Structured Responsive Design**: Eliminates clunky markdown tables in favor of high-readability card blockquotes for projects and symmetrical metrics blocks.
 
 ---
 
-## 2. Architecture & Data Flow
+## 2. Architecture & Telemetry Pipeline
 
 ```mermaid
 flowchart TD
@@ -33,9 +32,8 @@ flowchart TD
         SVG[Typing SVG Engine]
         PVC[Page View Counter]
         SI[Shields.io Badge Gateway]
-        GRS[GitHub Readme Stats]
+        GPSC[GitHub Profile Summary Engine]
         STR[Streak Stats Engine]
-        ACT[Activity Graph Engine]
     end
 
     subgraph DataSources["GitHub GraphQL / REST APIs"]
@@ -46,13 +44,11 @@ flowchart TD
     GH --> SVG
     GH --> PVC
     GH --> SI
-    GH --> GRS
+    GH --> GPSC
     GH --> STR
-    GH --> ACT
 
-    GRS --> API
+    GPSC --> API
     STR --> EVT
-    ACT --> EVT
 ```
 
 ---
@@ -62,28 +58,21 @@ flowchart TD
 ### 3.1 Hero Header & Identity
 1. **Dynamic Vector Typewriter**:
    - Provider: `readme-typing-svg.demolab.com`
-   - Parameters:
-     - Font: `JetBrains Mono`
-     - Font Weight: `500`
-     - Font Size: `20px`
-     - Color: `#38BDF8` (Cyan 400)
-     - Lines:
-       - `Software Engineer & Automation`
-       - `Full-Stack Web, Mobile & Data Pipelines`
-       - `Nuxt 3 • Laravel • Django • Flutter`
-       - `Headless Browser Automation & Scraping`
-2. **Telemetry Badges**:
+   - Parameters: `font=JetBrains+Mono&weight=500&size=20&pause=1500&color=38BDF8&center=true&vCenter=true&width=560`
+   - Key Lines:
+     - `Software Engineer & Automation`
+     - `Full-Stack Web, Mobile & Data Pipelines`
+     - `Nuxt 3 • Laravel • Django • Flutter`
+     - `Headless Browser Automation & Scraping`
+2. **Metadata & Status Badges**:
    - Page view counter (`komarev.com/ghpvc/`, `color=0284c7`, `style=flat-square`).
-   - Specialization tag (`Focus-Software_Engineer_%26_Automation`).
-   - Availability and geographic metadata (`style=flat-square`).
-3. **Direct Communication Protocol**:
-   - Email: `mailto:muhamadrofii911@gmail.com` (Gmail badge)
-   - LinkedIn: `https://linkedin.com/in/muhamadrofii` (LinkedIn badge)
-   - GitHub: `https://github.com/muhamadrofii` (GitHub badge)
+   - Specialization badge: `Focus-Software_Engineer_%26_Automation`.
+3. **Verified Contact Gateways**:
+   - Direct links with flat-square brand badges for Email, LinkedIn, and GitHub.
 
 ### 3.2 Technical Taxonomy (Shields.io + Simple Icons)
 
-| Domain | Target Stack | Canonical Icon Key |
+| Domain | Stack | Canonical Icon Key |
 | :--- | :--- | :--- |
 | **Languages** | JavaScript, TypeScript, Python, PHP, Dart, HTML5, CSS3, SQL | `javascript`, `typescript`, `python`, `php`, `dart`, `html5`, `css3`, `postgresql` |
 | **Automation & Tools** | Playwright, Python Automation, Git, GitHub, Postman, Figma | `playwright`, `python`, `git`, `github`, `postman`, `figma` |
@@ -91,37 +80,29 @@ flowchart TD
 | **Frontend & Mobile** | Vue.js, Nuxt 3, Flutter, Tailwind CSS, Bootstrap | `vuedotjs`, `nuxtdotjs`, `flutter`, `tailwindcss`, `bootstrap` |
 | **Storage & Databases** | MySQL, PostgreSQL, SQLite | `mysql`, `postgresql`, `sqlite` |
 
-### 3.3 Dynamic Statistics Integration
+### 3.3 Cohesive Activity & Performance Telemetry
 
-| Service Component | Endpoint Pattern | Configuration Parameters |
+All metrics utilize the unified `tokyonight` theme to maintain visual symmetry:
+
+| Service Component | Endpoint Pattern | Visual Dimensions & Output |
 | :--- | :--- | :--- |
-| **Profile Stats** | `github-readme-stats.vercel.app/api` | `username=muhamadrofii&show_icons=true&theme=tokyonight&hide_border=false&count_private=true&include_all_commits=true` |
-| **Top Languages** | `github-readme-stats.vercel.app/api/top-langs/` | `username=muhamadrofii&layout=compact&theme=tokyonight&hide_border=false` |
-| **Streak Tracker** | `streak-stats.demolab.com/` | `user=muhamadrofii&theme=tokyonight&hide_border=false` |
-| **Activity Graph** | `github-readme-activity-graph.vercel.app/graph` | `username=muhamadrofii&theme=tokyo-night&hide_border=false` |
+| **Annual Activity Wave** | `github-profile-summary-cards.../profile-details` | 700x200px overview card showing total annual contributions (315+), public repos, account age, and chronological contribution wave. |
+| **Core Stats Summary** | `github-profile-summary-cards.../stats` | 340x200px card detailing verified commits (250+), issues (28), and pull requests. |
+| **Language Breakdown** | `github-profile-summary-cards.../repos-per-language` | 340x200px visual distribution chart displaying repository allocation across languages. |
+| **Consistency Streak** | `streak-stats.demolab.com/?user=muhamadrofii` | 495x195px card tracking active streaks and total active contribution milestones. |
 
 ### 3.4 Selected Repository Index
 
-| Project Name | Architecture Pattern | Stack | Target Repository |
-| :--- | :--- | :--- | :--- |
-| **Data Scraping & Automation** | Headless Browser Automation & Pipelines | Python, Playwright | `scraping-google-play`, `scraping-X-2025` |
-| **Bank Sampah Platform** | Mobile Client + REST API Backend | Flutter, Node.js, Express | `banksampah-flutter`, `backendBankSampah` |
-| **Smart City Mobile** | Cross-Platform Mobile Client | Flutter, Dart, REST API | `smartcityflutteruas` |
-| **Nuxt 3 Portfolio & CMS** | SSR / Headless CMS Integration | Nuxt 3, Vue 3, Strapi | `nuxtJs-3-personalPortofolio` |
-| **SIMKODES** | Monolithic MVC Management | Laravel, Blade, MySQL | `simkodes` |
+Formatted using responsive markdown card blocks for optimal mobile/desktop rendering:
+1. **Scraping & Automation Suite** (`Python`, `Playwright`) - `scraping-google-play`, `scraping-X-2025`
+2. **Bank Sampah Digital Platform** (`Flutter`, `Node.js`, `Express`) - `banksampah-flutter`, `backendBankSampah`
+3. **Smart City Mobile** (`Flutter`, `Dart`) - `smartcityflutteruas`
+4. **Nuxt 3 Portfolio & CMS** (`Nuxt 3`, `Vue 3`, `Strapi`) - `nuxtJs-3-personalPortofolio`
+5. **SIMKODES** (`Laravel`, `Blade`, `MySQL`) - `simkodes`
 
 ---
 
-## 4. Performance & Availability Constraints
+## 4. Performance & Reliability Runbook
 
-1. **Sub-second Asset Rendering**: Badges are served via global edge CDNs (Fastly/Cloudflare via Shields.io).
-2. **Stateless Dynamic Metrics**: Statistics cards calculate metrics on request using GitHub's GraphQL API; cache TTL is enforced upstream (default 2 to 4 hours) to prevent GitHub secondary rate limiting.
-3. **No External Script Dependencies**: All components are rendered via static HTML and SVG markup supported natively by GitHub Markdown sanitation rules.
-
----
-
-## 5. Maintenance Runbook
-
-- **Adding Tech Badges**: Append to `README.md` following `<img src="https://img.shields.io/badge/<NAME>-<HEX>?style=flat-square&logo=<SLUG>&logoColor=white" />`.
-- **Project Re-ordering**: Update the Markdown table under `### Selected Projects` with repository links and stack definitions.
-- **Upstream Service Health**: If an external stats service experiences downtime, the corresponding image link can fail gracefully or be updated without layout disruption.
+1. **Service Decoupling**: Rather than relying on a single third-party Vercel instance, telemetry is balanced across dedicated services (`github-profile-summary-cards` and `streak-stats.demolab.com`).
+2. **Fail-safe Caching**: Upstream HTTP cache TTLs (4 to 24 hours) ensure fast page loads and protect against GitHub secondary API rate limits.
