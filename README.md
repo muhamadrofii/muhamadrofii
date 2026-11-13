@@ -98,44 +98,11 @@ Software Engineer with a core focus on full-stack software development and end-t
 
 ### Projects
 
-<table width="100%">
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://github.com/muhamadrofii/scraping-google-play"><b>Scraping & Automation</b></a><br/>
-      <sub>Headless browser data extraction pipelines for store & web feeds.</sub><br/>
-      <code>Python</code> <code>Playwright</code>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/muhamadrofii/banksampah-flutter"><b>Bank Sampah Platform</b></a><br/>
-      <sub>Community waste-recycling platform with mobile app & API services.</sub><br/>
-      <code>Flutter</code> <code>Node.js</code>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://github.com/muhamadrofii/smartcityflutteruas"><b>Smart City Mobile</b></a><br/>
-      <sub>Municipal citizen incident reporting & public notifications.</sub><br/>
-      <code>Flutter</code> <code>Dart</code>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/muhamadrofii/nuxtJs-3-personalPortofolio"><b>Nuxt 3 Portfolio & CMS</b></a><br/>
-      <sub>Full-stack developer portfolio & blog with headless Strapi CMS.</sub><br/>
-      <code>Nuxt 3</code> <code>Strapi</code>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://github.com/muhamadrofii/simkodes"><b>SIMKODES (Info Desa)</b></a><br/>
-      <sub>Village administrative documentation & records management.</sub><br/>
-      <code>Laravel</code> <code>MySQL</code>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/muhamadrofii/scraping-X-2025"><b>X Social Scraper</b></a><br/>
-      <sub>Automated social feed extractor & data ingestion pipelines.</sub><br/>
-      <code>Python</code> <code>Playwright</code>
-    </td>
-  </tr>
-</table>
+- **[Scraping & Automation](https://github.com/muhamadrofii/scraping-google-play)** — Web & store data extraction pipelines `Python` `Playwright`
+- **[Bank Sampah Platform](https://github.com/muhamadrofii/banksampah-flutter)** — Waste management mobile client & API `Flutter` `Node.js`
+- **[Smart City Mobile](https://github.com/muhamadrofii/smartcityflutteruas)** — Civic incident reporting & municipal services `Flutter` `Dart`
+- **[Nuxt 3 Portfolio](https://github.com/muhamadrofii/nuxtJs-3-personalPortofolio)** — Portfolio & technical blog with headless CMS `Nuxt 3` `Strapi`
+- **[SIMKODES](https://github.com/muhamadrofii/simkodes)** — Village administrative management system `Laravel` `MySQL`
 
 ---
 

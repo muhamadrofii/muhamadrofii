@@ -4,7 +4,7 @@
 - **Repository**: `muhamadrofii/muhamadrofii`
 - **Owner**: Muhamad Rofi'i (`muhamadrofii911@gmail.com`)
 - **Role Positioning**: Software Engineer & Automation
-- **Version**: 2.5.0
+- **Version**: 2.6.0
 - **Status**: Production
 
 ---
@@ -15,8 +15,9 @@ This specification defines the functional, structural, and integration requireme
 
 The architecture deploys an ultra-minimalist, high-signal developer portfolio:
 1. **Zero Tacky Emojis**: Replaced with canonical Simple Icons and clean typographic hierarchy.
-2. **Compact Card Grid Layout**: Projects structured in a responsive 2-column HTML grid with subtle borders, title anchors, and inline stack chips.
-3. **Scaled Single-Card Telemetry**: Scaled to 520px width to match the header typewriter width and maintain vertical discipline.
+2. **Streamlined Single-Line Project Index**: Fast-scanning list entries keeping the README lightweight and uncluttered.
+3. **Scaled Single-Card Telemetry**: High-density activity wave card scaled to 520px width for tight visual balance.
+4. **Native Pinned Repositories Decoupling**: The native GitHub "Popular repositories" 2-column grid is managed natively via GitHub's pin customizer beneath the README.
 
 ---
 
@@ -78,19 +79,17 @@ flowchart TD
 | **Frontend & Mobile** | Vue.js, Nuxt 3, Flutter, Tailwind CSS, Bootstrap | `vuedotjs`, `nuxtdotjs`, `flutter`, `tailwindcss`, `bootstrap` |
 | **Storage & Databases** | MySQL, PostgreSQL, SQLite | `mysql`, `postgresql`, `sqlite` |
 
-### 3.3 2-Column Project Grid
-Structured as a symmetrical 2x3 responsive table tile grid:
-- **Col 1 / Row 1**: Scraping & Automation (`Python`, `Playwright`)
-- **Col 2 / Row 1**: Bank Sampah Platform (`Flutter`, `Node.js`)
-- **Col 1 / Row 2**: Smart City Mobile (`Flutter`, `Dart`)
-- **Col 2 / Row 2**: Nuxt 3 Portfolio & CMS (`Nuxt 3`, `Strapi`)
-- **Col 1 / Row 3**: SIMKODES (Info Desa) (`Laravel`, `MySQL`)
-- **Col 2 / Row 3**: X Social Scraper (`Python`, `Playwright`)
+### 3.3 Minimalist Project Index
+- **Scraping & Automation**: Web & store data extraction pipelines (`Python`, `Playwright`)
+- **Bank Sampah Platform**: Waste management mobile client & API (`Flutter`, `Node.js`)
+- **Smart City Mobile**: Civic incident reporting & municipal services (`Flutter`, `Dart`)
+- **Nuxt 3 Portfolio**: Portfolio & technical blog with headless CMS (`Nuxt 3`, `Strapi`)
+- **SIMKODES**: Village administrative management system (`Laravel`, `MySQL`)
 
 ### 3.4 Scaled Telemetry Card
 - **Component**: `github-profile-summary-cards.vercel.app/api/cards/profile-details?username=muhamadrofii&theme=tokyonight`
-- **Render Width**: `520px` (scaled from 700px native viewBox)
-- **Rendered Metrics**: Total annual contributions, repository count, account longevity, and chronological activity wave curve.
+- **Render Width**: `520px`
+- **Rendered Metrics**: Total annual contributions (315+), repository count (36), account longevity, and chronological activity wave curve.
 
 ---
 
