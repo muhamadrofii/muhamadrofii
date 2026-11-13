@@ -4,7 +4,7 @@
 - **Repository**: `muhamadrofii/muhamadrofii`
 - **Owner**: Muhamad Rofi'i (`muhamadrofii911@gmail.com`)
 - **Role Positioning**: Software Engineer & Automation
-- **Version**: 2.2.0
+- **Version**: 2.3.0
 - **Status**: Production
 
 ---
@@ -15,7 +15,7 @@ This specification defines the functional, structural, and integration requireme
 
 The architecture deploys an informative, high-signal developer portfolio adhering to the following engineering standards:
 1. **Zero Tacky Emojis**: Replaced with verified Simple Icons and clean typographic hierarchy.
-2. **Robust Multi-source Telemetry**: Utilizes high-uptime, cached metrics services to avoid downtime.
+2. **Curated High-Signal Telemetry**: Focuses on verified annual activity curves and contribution consistency streaks, removing skewed language-by-repo donut charts.
 3. **Structured Responsive Design**: Eliminates clunky markdown tables in favor of high-readability card blockquotes for projects and symmetrical metrics blocks.
 
 ---
@@ -86,9 +86,7 @@ All metrics utilize the unified `tokyonight` theme to maintain visual symmetry:
 
 | Service Component | Endpoint Pattern | Visual Dimensions & Output |
 | :--- | :--- | :--- |
-| **Annual Activity Wave** | `github-profile-summary-cards.../profile-details` | 700x200px overview card showing total annual contributions (315+), public repos, account age, and chronological contribution wave. |
-| **Core Stats Summary** | `github-profile-summary-cards.../stats` | 340x200px card detailing verified commits (250+), issues (28), and pull requests. |
-| **Language Breakdown** | `github-profile-summary-cards.../repos-per-language` | 340x200px visual distribution chart displaying repository allocation across languages. |
+| **Annual Activity Wave** | `github-profile-summary-cards.../profile-details` | 700x200px overview card showing total annual contributions (315+), public repos (36), account age, and chronological contribution wave. |
 | **Consistency Streak** | `streak-stats.demolab.com/?user=muhamadrofii` | 495x195px card tracking active streaks and total active contribution milestones. |
 
 ### 3.4 Selected Repository Index

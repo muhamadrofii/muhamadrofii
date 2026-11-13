@@ -105,13 +105,7 @@ Software Engineer with a core focus on full-stack software development and end-t
     <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=muhamadrofii&theme=tokyonight" alt="Profile Details & Activity Wave" />
   </p>
 
-  <!-- Mid Row: Core Stats + Language Distribution -->
-  <p align="center">
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=muhamadrofii&theme=tokyonight" alt="GitHub Stats Summary" />
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=muhamadrofii&theme=tokyonight" alt="Repositories Per Language" />
-  </p>
-
-  <!-- Bottom Row: Consistency Streak -->
+  <!-- Consistency Streak -->
   <p align="center">
     <img src="https://streak-stats.demolab.com/?user=muhamadrofii&theme=tokyonight&hide_border=false" alt="GitHub Contribution Streak" />
   </p>
